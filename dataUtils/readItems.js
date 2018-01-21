@@ -4,7 +4,7 @@ const fs = require('fs');
 function fetchItems() {
   return new Promise((resolve, reject) => {
     fs.readFile(`${__dirname}/../data.json`, (error, data) => {
-      if (error) reject(error.message);
+      if (error) reject(error);
 
       resolve(JSON.parse(data));
     });

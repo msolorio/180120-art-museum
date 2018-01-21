@@ -1,21 +1,19 @@
-const routes = require('./routes');
+const actions = require('./actions');
 
-const args = process.argv;
-
-const command = args[2];
+const command = process.argv[2];
 
 function routeCommand(command) {
   switch(command) {
     case 'add':
-      routes.addItem(args);
+      actions.addItem();
       return;
 
     case 'get-all':
-      routes.getAllItems();
+      actions.getAllItems();
       return;
 
     case 'get-one':
-      routes.getOneItem();
+      actions.getOneItem();
       return;
 
     default:

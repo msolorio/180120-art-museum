@@ -11,5 +11,8 @@
   "devDependencies": {
     "eslint": "^4.16.0",
     "eslint-plugin-react": "^7.5.1"
+  },
+  "dependencies": {
+    "prompt": "^1.0.0"
   }
 }

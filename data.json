@@ -4,5 +4,15 @@
     "artist": "van gogh",
     "year": "1949",
     "medium": "acrylic paint"
+  }, {
+    "title": "ourTitle",
+    "artist": "ourArtist",
+    "year": 1956,
+    "medium": "household item"
+  }, {
+    "title": "day at the beach",
+    "artist": "gigi",
+    "year": "1956",
+    "medium": "paint"
   }]
 }
