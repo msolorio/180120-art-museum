@@ -1,5 +1,5 @@
 const triggerPrompt = require('../prompt/triggerPrompt');
-const addItemSchema = require('../prompt/schemas/addItemSchema');
+const addItemPromptSchema = require('../prompt/schemas/addItemPromptSchema');
 const ArtPiece = require('../models/artPieceModel');
 const readItems = require('../dataUtils/readItems');
 const writeItems = require('../dataUtils/writeItems');
@@ -9,7 +9,7 @@ function addItem() {
   let newArtPiece;
 
   // get input from user
-  triggerPrompt(addItemSchema)
+  triggerPrompt(addItemPromptSchema)
     .then((config) => {
       newArtPiece = new ArtPiece(config);
 
