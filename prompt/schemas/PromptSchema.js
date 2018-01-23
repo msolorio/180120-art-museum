@@ -10,9 +10,9 @@ function Schema(props) {
   this.properties = {};
 
   props.forEach((prop) => {
-    this.properties[prop] = {
-      description: prop,
-      message: `${prop} was not provided`,
+    this.properties[prop.name] = {
+      description: prop.description,
+      message: `${prop.name} was not provided`,
       required: true
     };
   });
