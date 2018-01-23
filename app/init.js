@@ -1,4 +1,4 @@
-const routeCommand = require('./routeCommand');
+const performAsyncAction = require('./performAsyncAction');
 const Prompt = require('../prompt/Prompt');
 const commandSchema = require('../prompt/schemas/commandSchema');
 
@@ -7,7 +7,7 @@ const commandPrompt = new Prompt(commandSchema);
 function initializeCommandPrompt() {
   commandPrompt.trigger()
     .then((response) => {
-      return routeCommand(response.command);
+      return performAsyncAction(response.command);
     })
     .then((completionMessage) => {
       if (completionMessage !== 'exit') {

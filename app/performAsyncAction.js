@@ -1,6 +1,6 @@
 const actions = require('./actions');
 
-function routeCommand(actionName) {
+function performAsyncAction(actionName) {
   switch(actionName) {
     case 'add':
       return actions.addItem();
@@ -13,4 +13,4 @@ function routeCommand(actionName) {
   }
 }
 
-module.exports = routeCommand;
+module.exports = performAsyncAction;
