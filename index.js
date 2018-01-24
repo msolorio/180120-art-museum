@@ -1,3 +1,10 @@
-const init = require('./app/init');
+const initializeCommandPrompt = require('./app/init/initializeCommandPrompt');
+const initializeProgram = require('./app/init/initializeProgram');
 
-init();
+initializeProgram()
+  .then(() => {
+    initializeCommandPrompt();
+  })
+  .catch((error) => {
+    console.error(error.message);
+  });

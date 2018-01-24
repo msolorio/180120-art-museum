@@ -1,9 +1,11 @@
 // TODO: assign unique ID to art piece instance
+
+const inputtedArtPieceProps = require('./inputtedArtPieceProps');
+
 function ArtPiece(config) {
-  this.title = config.title;
-  this.artist = config.artist;
-  this.year = config.year;
-  this.medium = config.medium;
+  inputtedArtPieceProps.forEach((prop) => {
+    this[prop] = config[prop];
+  });
 }
 
 // TODO: implement update functionality via prototype method

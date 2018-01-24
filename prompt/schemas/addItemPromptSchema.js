@@ -1,26 +1,12 @@
 const PromptSchema = require('./PromptSchema');
-const artist = 'artist';
-const title = 'title';
-const year = 'year';
-const medium = 'medium';
-const props = [
-  {
-    name: artist,
-    description: artist
-  },
-  {
-    name: title,
-    description: title
-  },
-  {
-    name: year,
-    description:year
-  },
-  {
-    name: medium,
-    description: medium
-  }
-];
+const inputtedArtPieceProps = require('../../models/artPiece/inputtedArtPieceProps');
+
+const props = inputtedArtPieceProps.map((prop) => {
+  return {
+    name: prop,
+    description: prop
+  };
+});
 
 const addItemPromptSchema = new PromptSchema(props);
 
