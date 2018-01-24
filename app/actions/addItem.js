@@ -16,6 +16,9 @@ function addItem() {
 
         return writeItems(inventory);
       })
+      .then(() => {
+        console.log('Write complete');
+      })
       .catch((error) => {
         reject(error);
       });

@@ -1,7 +1,7 @@
 const initializeCommandPrompt = require('./app/init/initializeCommandPrompt');
-const initializeProgram = require('./app/init/initializeProgram');
+const initializeInventory = require('./app/init/initializeInventory');
 
-initializeProgram()
+initializeInventory()
   .then(() => {
     initializeCommandPrompt();
   })
