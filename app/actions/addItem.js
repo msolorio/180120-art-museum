@@ -1,11 +1,7 @@
-const Prompt = require('../../prompt/Prompt');
-const addItemPromptSchema = require('../../prompt/schemas/addItemPromptSchema');
 const ArtPiece = require('../../models/artPieceModel');
 const readItems = require('../dataUtils/readItems');
 const writeItems = require('../dataUtils/writeItems');
-
-const addItemPrompt = new Prompt(addItemPromptSchema);
-
+const addItemPrompt = require('../../prompt/instances/addItemPrompt');
 // called on `node index.js add`
 function addItem() {
   let newArtPiece;

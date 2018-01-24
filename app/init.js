@@ -1,8 +1,5 @@
 const performAsyncAction = require('./performAsyncAction');
-const Prompt = require('../prompt/Prompt');
-const commandSchema = require('../prompt/schemas/commandSchema');
-
-const commandPrompt = new Prompt(commandSchema);
+const commandPrompt = require('../prompt/instances/commandPrompt');
 
 function initializeCommandPrompt() {
   commandPrompt.trigger()
