@@ -1,7 +1,8 @@
-const ArtPiece = require('../../models/artPieceModel');
-const readItems = require('../dataUtils/readItems');
+const ArtPiece = require('../../models/artPiece/artPieceModel');
 const writeItems = require('../dataUtils/writeItems');
 const addItemPrompt = require('../../prompt/instances/addItemPrompt');
+const inventory = require('../../models/inventory');
+
 // called on `node index.js add`
 function addItem() {
   let newArtPiece;
@@ -11,18 +12,9 @@ function addItem() {
     return addItemPrompt.trigger()
       .then((config) => {
         newArtPiece = new ArtPiece(config);
+        inventory.artPieces.push(newArtPiece);
 
-        // read from data.json
-        return readItems();
-      })
-      .then((dataFromDb) => {
-        dataFromDb.artPieces.push(newArtPiece);
-
-        // write to data.json
-        return writeItems(dataFromDb);
-      })
-      .then(() => {
-        resolve('add item complete');
+        return writeItems(inventory);
       })
       .catch((error) => {
         reject(error);
