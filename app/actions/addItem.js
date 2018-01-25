@@ -1,4 +1,4 @@
-const writeItems = require('../dataUtils/writeItems');
+const writeItems = require('../utils/dataUtils/writeItems');
 const addItemPrompt = require('../../prompt/instances/addItemPrompt');
 const inventory = require('../../models/inventory/inventory');
 

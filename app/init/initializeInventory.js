@@ -1,4 +1,4 @@
-const readItems = require('../dataUtils/readItems');
+const readItems = require('../utils/dataUtils/readItems');
 const inventory = require('../../models/inventory/inventory');
 
 function initializeInventory() {

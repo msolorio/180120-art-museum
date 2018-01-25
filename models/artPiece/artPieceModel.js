@@ -1,8 +1,10 @@
-// TODO: assign unique ID to art piece instance
+const generateRandomHash = require('../../app/utils/generateRandomHash');
 
 const inputtedArtPieceProps = require('./inputtedArtPieceProps');
 
 function ArtPiece(config) {
+  this._id = generateRandomHash();
+
   inputtedArtPieceProps.forEach((prop) => {
     this[prop] = config[prop];
   });

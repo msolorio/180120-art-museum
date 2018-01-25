@@ -6,7 +6,7 @@ function writeItems(data) {
       data = JSON.stringify(data);
     }
 
-    fs.writeFile(`${__dirname}/../../data.json`, data, (error) => {
+    fs.writeFile(`${__dirname}/../../../data.json`, data, (error) => {
       if (error) reject(error);
 
       resolve(data);
