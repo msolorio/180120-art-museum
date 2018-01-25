@@ -1,20 +1,14 @@
-const ArtPiece = require('../../models/artPiece/artPieceModel');
 const writeItems = require('../dataUtils/writeItems');
 const addItemPrompt = require('../../prompt/instances/addItemPrompt');
-const inventory = require('../../models/inventory');
+const inventory = require('../../models/inventory/inventory');
 
-// called on `node index.js add`
 function addItem() {
-  let newArtPiece;
-
-  // get input from user
   return new Promise((resolve, reject) => {
     return addItemPrompt.trigger()
       .then((config) => {
-        newArtPiece = new ArtPiece(config);
-        inventory.artPieces.push(newArtPiece);
+        const updatedInventory = inventory.addItem(config);
 
-        return writeItems(inventory);
+        return writeItems(updatedInventory);
       })
       .then(() => {
         console.log('Write complete');
