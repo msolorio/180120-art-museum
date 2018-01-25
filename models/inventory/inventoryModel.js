@@ -21,4 +21,8 @@ Inventory.prototype.getAllItems = function() {
   return this.artPieces;
 };
 
+// TODO: method to remove item by Id
+
+// TODO: method to update an item by Id
+
 module.exports = Inventory;
