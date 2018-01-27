@@ -26,9 +26,11 @@ Inventory.prototype.getOneItem = function(id) {
 };
 
 Inventory.prototype.removeOneItem = function(id) {
-  return this.artPieces.filter((piece) => {
+  this.artPieces = this.artPieces.filter((piece) => {
     return piece._id !== id;
   });
+
+  return { artPieces: this.artPieces };
 };
 
 /**
@@ -39,8 +41,13 @@ Inventory.prototype.removeOneItem = function(id) {
  * @param  {string} value the value the property will be updated with
  * @return {type} - the full updated item object
  */
-Inventory.prototype.updateOneItem = function(prop, value) {
-  // TODO: write method
+Inventory.prototype.updateOneItem = function(updateInfo) {
+  const { id, property, value } = updateInfo;
+
+  const itemToUpdate = this.artPieces.find(piece => piece._id === id);
+  itemToUpdate[property] = value;
+
+  return { artPieces: this.artPieces };
 };
 
 module.exports = Inventory;
