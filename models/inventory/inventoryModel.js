@@ -25,8 +25,22 @@ Inventory.prototype.getOneItem = function(id) {
   });
 };
 
-// TODO: method to remove item by Id
+Inventory.prototype.removeOneItem = function(id) {
+  return this.artPieces.filter((piece) => {
+    return piece._id !== id;
+  });
+};
 
-// TODO: method to update an item by Id
+/**
+ * Inventory.prototype.updateOneItem - updates one property of item with value
+ * specified in the inventory
+ *
+ * @param  {string} prop  property to update
+ * @param  {string} value the value the property will be updated with
+ * @return {type} - the full updated item object
+ */
+Inventory.prototype.updateOneItem = function(prop, value) {
+  // TODO: write method
+};
 
 module.exports = Inventory;
