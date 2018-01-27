@@ -14,6 +14,9 @@ function performAsyncAction(actionName) {
     case 'remove':
       return actions.removeOneItem();
 
+    case 'update':
+      return actions.updateOneItem();
+
     case 'exit':
       return new Promise((resolve) => resolve('exit'));
 
