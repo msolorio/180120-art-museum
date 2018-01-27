@@ -8,6 +8,9 @@ function performAsyncAction(actionName) {
     case 'get-all':
       return actions.getAllItems();
 
+    case 'get-one':
+      return actions.getOneItem();
+
     case 'exit':
       return new Promise((resolve) => resolve('exit'));
 
