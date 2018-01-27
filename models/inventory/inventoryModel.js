@@ -1,8 +1,6 @@
 const ArtPiece = require('../artPiece/artPieceModel');
 
-function Inventory() {
-  this.testProp = 'testProp';
-}
+function Inventory() {}
 
 Inventory.prototype.populateInventory = function(artPieces) {
   this.artPieces = artPieces.map((entry) => {
@@ -19,6 +17,12 @@ Inventory.prototype.addItem = function(config) {
 
 Inventory.prototype.getAllItems = function() {
   return this.artPieces;
+};
+
+Inventory.prototype.getOneItem = function(id) {
+  return this.artPieces.find((piece) => {
+    return piece._id === id;
+  });
 };
 
 // TODO: method to remove item by Id
