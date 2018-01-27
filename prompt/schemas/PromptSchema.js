@@ -4,7 +4,7 @@
 * @param  {array} props - takes in array of properties to be requested
 * on the prompt
 * @return {type} returns an object specifying prompt property
-names, validation messages, and sets all properties to required
+names, validation messages, and sets all properties to rootRequired
 */
 function Schema(props) {
   this.properties = {};
@@ -13,7 +13,7 @@ function Schema(props) {
     this.properties[prop.name] = {
       description: prop.description,
       message: `${prop.name} was not provided`,
-      required: true
+      rootRequired: true
     };
   });
 }

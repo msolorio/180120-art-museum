@@ -14,6 +14,9 @@
     "plugins": [
         "react"
     ],
+    "globals": {
+      "rootRequire": true
+    },
     "rules": {
         "no-case-declarations": 0,
         "no-console": 0,

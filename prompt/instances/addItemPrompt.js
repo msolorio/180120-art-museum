@@ -1,5 +1,5 @@
-const Prompt = require('../Prompt');
-const addItemPromptSchema = require('../schemas/addItemPromptSchema');
+const Prompt = rootRequire('./prompt/Prompt');
+const addItemPromptSchema = rootRequire('./prompt/schemas/addItemPromptSchema');
 
 const addItemPrompt = new Prompt(addItemPromptSchema);
 

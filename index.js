@@ -1,5 +1,6 @@
-const initializeCommandPrompt = require('./app/init/initializeCommandPrompt');
-const initializeInventory = require('./app/init/initializeInventory');
+global.rootRequire = require('./utils/rootRequire');
+const initializeCommandPrompt = rootRequire('./app/init/initializeCommandPrompt');
+const initializeInventory = rootRequire('./app/init/initializeInventory');
 
 initializeInventory()
   .then(() => {

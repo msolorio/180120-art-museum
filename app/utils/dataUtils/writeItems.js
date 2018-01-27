@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = rootRequire('fs');
 
 function writeItems(data) {
   return new Promise((resolve, reject) => {

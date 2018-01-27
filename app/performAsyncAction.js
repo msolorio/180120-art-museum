@@ -1,4 +1,4 @@
-const actions = require('./actions');
+const actions = rootRequire('./app/actions');
 
 function performAsyncAction(actionName) {
   switch(actionName) {
@@ -10,6 +10,9 @@ function performAsyncAction(actionName) {
 
     case 'get-one':
       return actions.getOneItem();
+
+    case 'remove':
+      return actions.removeOneItem();
 
     case 'exit':
       return new Promise((resolve) => resolve('exit'));

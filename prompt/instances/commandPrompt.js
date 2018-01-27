@@ -1,5 +1,5 @@
-const Prompt = require('../Prompt');
-const commandSchema = require('../schemas/commandSchema');
+const Prompt = rootRequire('./prompt/Prompt');
+const commandSchema = rootRequire('./prompt/schemas/commandSchema');
 
 const commandPrompt = new Prompt(commandSchema);
 

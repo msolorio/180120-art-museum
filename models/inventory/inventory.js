@@ -1,4 +1,4 @@
-const Inventory = require('./inventoryModel');
+const Inventory = rootRequire('./models/inventory/inventoryModel');
 
 const inventory = new Inventory();
 

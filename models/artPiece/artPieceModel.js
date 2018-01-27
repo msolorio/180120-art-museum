@@ -1,6 +1,6 @@
-const generateRandomHash = require('../../app/utils/generateRandomHash');
+const generateRandomHash = rootRequire('./app/utils/generateRandomHash');
 
-const inputtedArtPieceProps = require('./inputtedArtPieceProps');
+const inputtedArtPieceProps = rootRequire('./models/artPiece/inputtedArtPieceProps');
 
 function ArtPiece(config) {
   this._id = generateRandomHash();

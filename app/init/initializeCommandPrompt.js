@@ -1,5 +1,5 @@
-const performAsyncAction = require('../performAsyncAction');
-const commandPrompt = require('../../prompt/instances/commandPrompt');
+const performAsyncAction = rootRequire('./app/performAsyncAction');
+const commandPrompt = rootRequire('./prompt/instances/commandPrompt');
 
 function initializeCommandPrompt() {
   commandPrompt.trigger()

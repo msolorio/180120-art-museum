@@ -1,5 +1,5 @@
-const inventory = require('../../models/inventory/inventory');
-const trimArtPieces = require('../utils/trimArtPieces');
+const inventory = rootRequire('./models/inventory/inventory');
+const trimArtPieces = rootRequire('./app/utils/trimArtPieces');
 
 function getAllItems() {
   const artPieces = inventory.getAllItems();

@@ -1,6 +1,6 @@
-const writeItems = require('../utils/dataUtils/writeItems');
-const addItemPrompt = require('../../prompt/instances/addItemPrompt');
-const inventory = require('../../models/inventory/inventory');
+const writeItems = rootRequire('./app/utils/dataUtils/writeItems');
+const addItemPrompt = rootRequire('./prompt/instances/addItemPrompt');
+const inventory = rootRequire('./models/inventory/inventory');
 
 function addItem() {
   return new Promise((resolve, reject) => {

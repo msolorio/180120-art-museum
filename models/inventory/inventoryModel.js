@@ -1,4 +1,4 @@
-const ArtPiece = require('../artPiece/artPieceModel');
+const ArtPiece = rootRequire('./models/artPiece/artPieceModel');
 
 function Inventory() {}
 

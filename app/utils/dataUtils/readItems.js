@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = rootRequire('fs');
 
 // reads data asynchronously and resolves passing in art pieces array
 function fetchItems() {
