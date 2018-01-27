@@ -1,4 +1,4 @@
-const prompt = require('prompt');
+const prompt = rootRequire('prompt');
 
 function Prompt(schema) {
   this.schema = schema;

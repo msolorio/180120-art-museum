@@ -1,4 +1,4 @@
-const PromptSchema = require('./PromptSchema');
+const PromptSchema = rootRequire('./prompt/schemas/PromptSchema');
 
 const getOnePromptProps = [{
   name: 'id',

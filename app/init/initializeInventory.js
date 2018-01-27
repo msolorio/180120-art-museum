@@ -1,5 +1,5 @@
-const readItems = require('../utils/dataUtils/readItems');
-const inventory = require('../../models/inventory/inventory');
+const readItems = rootRequire('./app/utils/dataUtils/readItems');
+const inventory = rootRequire('./models/inventory/inventory');
 
 function initializeInventory() {
   return new Promise((resolve, reject) => {
