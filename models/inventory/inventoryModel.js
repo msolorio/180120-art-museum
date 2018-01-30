@@ -1,10 +1,18 @@
 const ArtPiece = rootRequire('./models/artPiece/artPieceModel');
-
+const AcrylicPainting = rootRequire('./models/artPiece/artPieceTypes/AcrylicPainting/AcrylicPaintingModel');
 function Inventory() {}
 
 Inventory.prototype.populateInventory = function(artPieces) {
   this.artPieces = artPieces.map((entry) => {
-    return new ArtPiece(entry);
+
+    // TODO: this will be moved to the art piece factory
+    switch(entry.medium) {
+      case 'acrylic paint':
+        return new AcrylicPainting(entry);
+
+      default:
+        return new ArtPiece(entry);
+    }
   });
 };
 
