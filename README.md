@@ -1,7 +1,6 @@
 **_Work in Progress_**
 
-An art museum inventory management tool using object oriented design with
-JavaScript prototypal inheritance.
+An art museum inventory management tool using object oriented design with prototypal inheritance.
 
 Run the app
 ```
